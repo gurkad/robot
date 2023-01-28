@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230128 11:43:19.390" rpa="false" schemaversion="3">
+<suite id="s1" name="Dg" source="C:\Users\vdi-student\PycharmProjects\robot\dg.robot">
+<test id="s1-t1" name="Unsuccesfull Login To Wikipedia" line="36">
+<status status="FAIL" starttime="20230128 11:43:19.810" endtime="20230128 11:43:19.815">Test contains no keywords.</status>
+</test>
+<test id="s1-t2" name="Log In Wikipedia" line="37">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:.mw-message-box-error</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230128 11:43:19.820" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230128 11:43:19.820" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230128 11:43:19.815" endtime="20230128 11:43:19.825"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_error_mesage}</var>
+<arg>css:.mw-message-box-error</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230128 11:43:19.825" endtime="20230128 11:43:19.825"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230128 11:43:19.825" endtime="20230128 11:43:19.825"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230128 11:43:19.825" endtime="20230128 11:43:19.825"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>${my_error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230128 11:43:19.825" endtime="20230128 11:43:19.825"/>
+</kw>
+<status status="FAIL" starttime="20230128 11:43:19.815" endtime="20230128 11:43:19.825">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20230128 11:43:19.394" endtime="20230128 11:43:19.830"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Dg">Dg</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
